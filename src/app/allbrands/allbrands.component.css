@@ -1,0 +1,47 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+th {
+    
+    text-align: center;
+    padding: 8px;
+  }
+  
+  
+  tr:nth-child(even) {
+    background-color:  #efefef;
+  }
+  .small-image {  max-width: 100%;
+    height: 151px;
+    position: relative;
+  }
+  td{
+    text-align: center;
+    border: 1px solid #dddddd;
+  }
+
+
+  .card-custom {
+    width: 18rem; /* Set the card width */
+    height: 24rem; /* Set the card height */
+    margin-bottom: 20px;
+  }
+  .card-img-top {
+    width: 100%;
+    height: 18rem; /* Set a fixed height for the images */
+    object-fit: cover; /* Ensure the image covers the card area without stretching */
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    text-align: center; /* Center the text horizontally */
+    height: 12rem; /* Make the card body take up the remaining height */
+  }
+  .card-title {
+    font-size: 1.25rem; /* Increase the font size of the card title */
+    margin-top: auto; /* Push the title to the bottom */
+  }

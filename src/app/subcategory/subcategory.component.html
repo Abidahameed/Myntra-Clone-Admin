@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <form (ngSubmit)="onSubmit(addSubcategory.value)"  #addSubcategory="ngForm" action="/action_page.php" enctype="multipart/form-data"
+ >
+    <div class="row center">
+      <h2>Add a Subcategory</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="Name" ngModel>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label>Section</label>
+      </div>
+      <div class="col-75">
+        <select id="Section" name="section" ngModel>
+          <option *ngFor="let section of sections" [value]="section.Name">{{ section.Name }}</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-25">
+        <label>Category</label>
+      </div>
+      <div class="col-75">
+        <select id="category" name="category" ngModel>
+          <option *ngFor="let category of categories" [value]="category.Name">{{ category.Name }}</option>
+        </select>
+      </div>
+    </div>
+
+
+      <div class="row">
+        <div class="col-25">
+          <label for="image">image</label>
+        </div>
+        <div class="col-75">
+          <input type="file" id="image" name="image" ngModel (change)="handleFileInput($event)">
+        </div>
+      </div>
+    
+    
+    <div class="row justify-content-center">
+      <input type="submit" value="Submit" style="background-color:rgb(215, 26, 92); color: white; width: 150px;" >
+
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

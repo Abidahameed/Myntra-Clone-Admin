@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>All Brands</h2>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3"  *ngFor="let brand of data; let i = index">
+        <div class="card card-custom">
+          <img [src]="brand.Image" class="card-img-top" alt="{{ brand.Name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ brand.Name }}</h5>
+            <!-- Uncomment the button if needed -->
+            <!-- <button (click)="deleteProduct(i, data.id)" class="btn btn-danger">Delete</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</body>
+</html>
